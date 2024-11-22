@@ -2,14 +2,22 @@
     margin: 0;
     padding: 0;
 }
-html, body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #1c1c1e;
-    overflow-x: hidden;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-}
+body {
+  
+        width: 100%;;
+        margin: 0;
+        padding: 0;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background: url(vecteezy_matrix-video-web-programming-coding_13323101.mp4);
+        background-size: cover;
+        color: #fff;
+        overflow: hidden;
+      }
+
 .navbar {
     position: fixed;
     z-index: 1;
@@ -18,7 +26,7 @@ html, body {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background-color: #1c1c1e;
+    background-color: transparent;
     box-shadow: white;
     box-shadow: 0 4px 10px rgba(255, 255, 255, 0.1);
 }
@@ -68,41 +76,116 @@ html, body {
     opacity: 1;
     height: auto; 
 }
-.login-box {
-    width: 600px; 
-    height: 300px;
-    padding: 2rem;
-    background-color: #1f1f1f;
-    border-radius: 8px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-    text-align: center;
-    margin-top: 250px;
-  }
+body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background-color: #1e1e1e;
+      color: #fff;
+      overflow: hidden;
+    }
 
-  .login-box h2 {
-    margin-bottom: 1.5rem;
-    color: #333;
-  }
+    /* Text Animation */
+    .animated-text {
+      font-size: 2em;
+      font-weight: bold;
+      opacity: 1;
+      animation: fadeOut 3s ease-in-out forwards;
+    }
 
-  .login-box input[type="text"],
-  .login-box input[type="password"] {
-    width: 80%;
-    padding: 0.75rem;
-    margin-bottom: 1rem;
-    border-radius: 20px;
-  }
+    @keyframes fadeOut {
+      0% {
+        opacity: 1;
+      }
+      100% {
+        opacity: 0;
+        transform: scale(1.2);
+      }
+    }
 
-  .login-box button {
-    width: 100%;
-    padding: 0.75rem;
-    background-color: #4CAF50;
-    border: none;
-    color: white;
-    border-radius: 20px;
-    font-size: 1rem;
-    cursor: pointer;
-  }
+    /* Login Form (Initially Hidden) */
+    .login-form {
+      display: none;
+      width: 900px;
+      height: 500px;
+      align-items: center;
+      background: black;
+      margin-top: 50px;
+      padding: 20px;
+      box-shadow: 0 0 20px 5px neongreen; /* Neon green glow */
+      border-radius: 10px;
+    }
 
-  .login-box button:hover {
-    background-color: #45a049;
-  }
+    .login-form form{
+      display: grid;
+      margin-left: 100px;
+    }
+
+    .login-form input {
+      background-color: #1c1c1e;
+      width: 400px;
+      padding: 10px;
+      margin-bottom: 15px;
+      border: none;
+      border-radius: 5px;
+      outline: none;
+    }
+
+    .login-form input[type="text"],
+    .login-form input[type="password"] {
+      background-color: #1c1c1c;
+      color: #fff;
+    }
+
+    .login-form input[type="submit"] {
+      background-color: rgb(18, 18, 18);
+      color: #fff;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      width: 250px;
+      margin-left: 20%;
+    }
+
+    .login-form input[type="submit"]:hover {
+      background-color: #007bbf;
+    }
+    .video-container {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      z-index: -1; /* Keep video behind other content */
+    }
+    
+    #background-video {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      min-width: 100%;
+      min-height: 100%;
+      transform: translate(-50%, -50%);
+      object-fit: cover; /* Ensures the video fills the screen without distortion */
+    }
+    @keyframes glowPulse {
+      0% {
+        box-shadow: 0 0 10px 2px #37ff14cf; /* Glow starts small */
+      }
+      50% {
+        box-shadow: 0 0 20px 5px #ffffffcf; /* Glow grows brighter */
+      }
+      100% {
+        box-shadow: 0 0 6px 2px #37ff14cf; /* Glow fades back */
+      }
+    }
+    .login-form img{
+      animation: glowPulse 2s infinite;
+    }
+    .login-form i{
+      margin-left: 20%;
+    }
